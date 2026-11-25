@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <main class="page-card">
+    <p class="eyebrow">NODE + EXPRESS PROJECT</p>
+    <h1><%= title %></h1>
+    <h2 class="student-name"><%= myname %></h2>
+    <p class="intro">A few places I would like to visit, rated from 1 to 10.</p>
+
+    <ol class="places-list">
+      <% places.forEach(function(place) { %>
+        <li>
+          <span class="place-name"><%= place.name %></span>
+          <span class="rating"><%= place.rating %>/10</span>
+        </li>
+      <% }); %>
+    </ol>
+    <p class="footer-note">Created with Node.js, Express, and EJS.</p>
+  </main>
+</body>
+</html>
